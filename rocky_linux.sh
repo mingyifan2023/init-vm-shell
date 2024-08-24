@@ -1,5 +1,3 @@
-
-
 # 用备份来解决错误修改的问题
 # 1. 将密钥专门放到单独的一个地方
 # 2. 然后专门引用时专门去引用那里就可以解决错误生成和错误引用的问题
@@ -208,3 +206,40 @@ sudo firewall-cmd --add-port=80/tcp --permanent; # nginx
 
 sudo firewall-cmd --reload;
 sudo firewall-cmd --list-ports;
+
+
+# 最终借助图形化的界面，用粘贴秘密的方式解决了
+
+
+#  Ticket Messages
+# Accounts Team  Vultr Staff
+# 2024-08-23 22:14:00
+# Hello,
+
+# If you are unable to login to your instance via ssh or via the View Console button on the server information page, then you will need to try via single user mode.
+
+# The below tutorial shows how to get to single user mode:
+
+# https://www.vultr.com/docs/boot-into-single-user-mode-reset-root-password
+
+
+# If that does not work, then you will need to upload a rescue ISO and boot the instance from that for data recovery or troubleshooting purposes. The procedure for such an operation would be as follows:
+
+# 1. Go to https://my.vultr.com -> Servers -> Your VPS Name -> Settings -> Custom ISO
+
+# 2. Under ISO Library select Finnix
+
+# 3. Select "Attach ISO and Reboot"
+
+# 4. Open the Console (computer icon in top right of server information page)
+
+# 5. Once you've confirmed that the instance has booted and is running the live recovery OS, you should be able to mount the disk that your data resides within and troubleshoot any operating system issues.
+
+# Additional information on using the Finnix Rescue is available at:
+# https://www.vultr.com/docs/troubleshoot-your-vps-with-bootable-isos/
+
+# 6. Once the recovery is complete, you can return to the Custom ISO page and click "Remove ISO" to unmount the ISO and reboot the VPS.
+
+# Thank you,
+# Winston M.
+# www.vultr.com
